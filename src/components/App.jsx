@@ -1,11 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-function App(){
-    return (<div>
+import Login from "./Login";
+import Input from "./Input";
 
+var isLoggedIn = false;
 
-    </div>)
-};
+function App() {
+    return (
+        <div className="container">
+            {isLoggedIn === true ? <h1>Hello</h1> : <Login/>}
+
+        </div>
+    );
+}
 
 export default App;
