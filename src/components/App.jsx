@@ -1,11 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import Form from "./Form";
 
-function App(){
-    return (<div>
+var userIsRegistered = true;
 
-
-    </div>)
-};
+function App() {
+    return (
+        <div className="container">
+            <Form
+                isRegister={userIsRegistered}
+            />
+        </div>
+    );
+}
 
 export default App;
