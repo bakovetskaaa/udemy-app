@@ -1,11 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-function App(){
-    return (<div>
+var isDone = false;
 
+function strike() {
+    isDone = true;
+    // document.getElementById("root").style.textDecoration = "line-through";
+}
 
-    </div>)
-};
+function unStrike() {
+    isDone = false;
+    // document.getElementById("root").style.textDecoration = null;
+}
+function App() {
+
+    return (
+        <div>
+            <p>Buy milk</p>
+            <button onClick={strike}>Change to strike through</button>
+            <button onClick={unStrike}>Change back</button>
+        </div>
+    );
+}
 
 export default App;
