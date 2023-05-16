@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ClassComponent from "./ClassComponent";
+import FunctionalComponent from "./FunctionalComponent";
 
-function App(){
-    return (<div>
-
-
-    </div>)
-};
+class App extends React.Component {
+    render() {
+        return <ClassComponent />;
+    }
+}
 
 export default App;
