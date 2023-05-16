@@ -1,24 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// CHALLENGE: uncomment the code below and see the car stats rendered
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './components/App';
-
-    ReactDOM.render(
-        <div>
-            <App/>
-        </div>,
-        document.getElementById("root"));
+import cars from "./practice";
 
 
-//----//1. Create a new React app.
-//----//2. Create a App.jsx component.
-//----//3. Create a Header.jsx component that renders a <header> element
-//----//to show the Keeper App name in an <h1>.
-//----//4. Create a Footer.jsx component that renders a <footer> element
-//----//to show a copyright message in a <p> with a dynamically updated year.
-//5. Create a Note.jsx component to show a <div> element with a
-//<h1> for a title and a <p> for the content.
-//6. Make sure that the final website is styled like the example shown here:
-//https://l1pp6.csb.app/
+const [tesla, honda] = cars;
 
-//HINT: You will need to study the classes in teh styles.css file to apply styling.
+// const {model,  coloursByPopularity, speedStats: {topSpeed, zeroToSixty}} = tesla;
+const {speedStats:{topSpeed: teslaTopSpeed}} = tesla;
+const {speedStats:{topSpeed: hondaTopSpeed}} = honda;
+
+ReactDOM.render(
+  <table>
+    <tr>
+      <th>Brand</th>
+      <th>Top Speed</th> 
+    </tr>
+    <tr>
+      <td>{tesla.model}</td>
+      <td>{teslaTopSpeed}</td>
+      <td>{tesla.coloursByPopularity}</td>
+    </tr>
+    <tr>
+      <td>{honda.model}</td>
+      <td>{hondaTopSpeed}</td>
+      <td>{honda.coloursByPopularity}</td>
+    </tr>
+  </table>,
+  document.getElementById("root")
+);
